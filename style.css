@@ -73,8 +73,11 @@
     right:0;
     background-color: white;
     display: none;
+    
+  
 
 }
+
 .mylearning:hover .mylearning-popup{
     display:block;
 }
@@ -92,7 +95,14 @@
     background-color: #A436F0;
     color: white;
     padding: 10px;
-
+    border:solid #A436F0 2px;
+    cursor: pointer;
+}
+.container p:hover{
+    transition-duration: 0.5s;
+    background-color: white;
+    color: black;
+    border:solid #A436F0 2px;
 }
 .sale{
     position: relative;
@@ -108,7 +118,21 @@
     border: solid black 2px;
     border-radius: 30px;
     background-color: white;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity:0;
+    animation-fill-mode: forwards;
 
+}
+@keyframes zoom{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity:1;
+    }
 }
 .sale-offer p{
     margin-top: 10px;
